@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> S'inscrire</title>
+
+    <link rel="stylesheet" type="text/css" href="style2.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+
+
+</head>
+
+<body>
+
+    <div class="main-block">
+        <h1>S'inscrire</h1>
+        <form method="post" action="index3.php">
+            <div class="info">
+                <div class="info-item">
+                    <label class="icon" for="name"><i class="fas fa-users"></i></label>
+                    <input type="text" name="nom" id="name" placeholder="Nom" required />
+                </div>
+                <div class="info-item">
+                    <label class="icon" for="name"><i class='fas fa-user'></i></label>
+                    <input type="text" name="prenom" id="prenom" placeholder="Prenom" required />
+                </div>
+                <div class="info-item">
+                    <label class="icon" for="cin"><i class="far fa-address-card"></i></label>
+                    <input type="tel" name="cin" id="cinM" required pattern="[0-1][0-9]{7}" placeholder="CIN" />
+                </div>
+                <div class="info-item">
+                    <label class="icon" for="email"><i class="fas fa-envelope"></i></label>
+                    <input type="email" name="email" id="email" placeholder="Email" required />
+                </div>
+
+
+                <div class="info-item">
+                    <label class="icon" for="address"><i class='fas fa-home'></i></label>
+                    <input type="text" name="address" id="address" placeholder="Address" required>
+                </div>
+                <div class="info-item">
+                    <label class="icon" for="birth-date"><i class='fas fa-birthday-cake'></i></i></label>
+                    <input class="fname" type="date" name="dateNaissence" id="birth-date" aria-labelledby="birth-date"
+                        required aria-describedby="birth-date-format" min="1900-01-01" max="2022-12-31">
+                </div>
+                <div class="info-item">
+                    <label class="icon" for="phone"><i class="fas fa-phone"></i></label>
+                    <input id="telNo" name="numeroTel" type="tel" placeholder="Numero Telephone" required
+                        pattern="(00216|\+216)*(2|5|9)[0-9][ ]{0,}[0-9]{3}[ ]{0,}[0-9]{3}">
+                    <small id="telNo" class="form-text text-muted"> Le numero de Tel doit commence par 97, 95, 96, 20..
+                        au format (xx xxx xxx) ou (00216 xx xxx xxx) (+216 xx xxx xxx)
+                    </small>
+                </div>
+                <div class="info-item">
+                    <label class="icon" for="password"><i class='fas fa-user-lock'></i></label>
+                    <input type="password" name="mdp" id="password" placeholder="Mot de passe" minlength="8"
+                        maxlength="20" required />
+                    <small id="password" class="form-text text-muted">
+                        Votre mot de passe doit comporter de 8 - 20 caracteres <br>
+                        contenir des lettres et des chiffres.
+                    </small>
+                </div>
+            </div>
+            <div class="grade-type">
+                <h3>Vous etes un Medecin ou un Patient ? </h3>
+                <div>
+                    <input type="radio" value="none" id="radioOne" name="grade" checked />
+                    <label for="radioOne" class="radio">Medecin</label>
+                </div>
+                <div>
+                    <input type="radio" value="none" id="radioTwo" name="grade" />
+                    <label for="radioTwo" class="radio">Patient</label>
+                </div>
+            </div>
+            <h3>Si vous etes un Medecin preciser votre specialite :</h3>
+            <textarea type="text" name="specialite" placeholder="Specialite" rows="4"></textarea>
+            <button type="submit" name="submit1" href="medecin.php">Je suis un Medecin</button>
+            <button type="submit" name="submit2" href="utilisateur.php">Je suis un Patient</button>
+        </form>
+
+    </div>
+</body>
+
+</html>
